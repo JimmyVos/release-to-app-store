@@ -1,0 +1,57 @@
+{
+  "name": "release-to-app-store",
+  "version": "0.0.1",
+  "main": "./dist/bin/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": "./dist/src/bin/index.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "appstore",
+    "appstoreconnect",
+    "google play",
+    "react native"
+  ],
+  "description": "The release-to-app-store npm package streamlines the process of releasing mobile applications by leveraging the App Store Connect API and Google Play Developer API",
+  "publishConfig": {
+    "JimmyVos:registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "format": "prettier --write 'src/**/*.ts'",
+    "lint": "eslint 'src/**/*.ts'",
+    "format:check": "prettier --check 'src/**/*.ts'",
+    "prepare": "husky install",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JimmyVos/release-to-app-store.git"
+  },
+  "author": "JimmyVos",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "17.0.3",
+    "@commitlint/config-conventional": "17.0.3",
+    "@jest/globals": "29.4.3",
+    "@types/jest": "^29.5.10",
+    "@typescript-eslint/eslint-plugin": "5.32.0",
+    "@typescript-eslint/parser": "5.32.0",
+    "dotenv": "^16.3.1",
+    "eslint": "8.21.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "husky": "8.0.1",
+    "jest": "29.4.3",
+    "prettier": "2.7.1",
+    "ts-jest": "29.0.5",
+    "typescript": "4.7.4"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "commander": "^11.1.0",
+    "googleapis": "^129.0.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
