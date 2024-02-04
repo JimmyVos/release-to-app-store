@@ -1,11 +1,11 @@
 {
   "name": "release-to-app-store",
-  "version": "0.0.1",
-  "main": "./dist/bin/index.js",
-  "types": "./dist/index.d.ts",
-  "bin": "./dist/src/bin/index.js",
+  "version": "0.0.2",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "bin": "dist/src/bin/index.js",
   "files": [
-    "dist"
+    "/dist"
   ],
   "keywords": [
     "appstore",
