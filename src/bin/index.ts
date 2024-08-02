@@ -38,8 +38,7 @@ program
   .requiredOption('-p, --pathToReleaseText <pathToReleaseText>')
   .action(async cmd => {
     const appStore = await appStoreApi(cmd.key);
-    const release = await appStore.makeRelease(cmd);
-    console.log(release);
+    await appStore.makeRelease(cmd);
   });
 
 program
@@ -51,8 +50,7 @@ program
   .option('-p, --pathToReleaseText <pathToReleaseText>')
   .action(async cmd => {
     const googlePlay = await googlePlayApi(cmd.key);
-    const release = await googlePlay.makeRelease(cmd);
-    console.log(release);
+    await googlePlay.makeRelease(cmd);
   });
 
 program.parse(process.argv);

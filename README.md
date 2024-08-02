@@ -34,8 +34,7 @@ To interact with App Store Connect, follow these steps:
 
 ```bash
 authKey="-----BEGIN PRIVATE KEY-----
-MIGTAgEAMBfGByqGSMa9AgEGCCqGSM49AwEHBHkwdwIBAgQgNlGT+sd2rq2T9QCNzrr
-9h4VCc39kBl7gSf7vb44ZoudCYOgCgYIKoZIzj0DAQehRANCAASVKiEnISk7Nb8K
+your key
 -----END PRIVATE KEY-----"
 
 #set you key

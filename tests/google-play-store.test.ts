@@ -4,7 +4,7 @@ import { googlePlayApi } from '../src/google-play/google-play-api';
 
 const { ANDROID_APP_ID, ANDROID_VERSION, ANDROID_BUILD_NUMBER, ANDROID_KEY } = process.env;
 
-describe('should connect to Google Play Store', () => {
+describe('should connect to APP Play Store', () => {
   it('should have the correct environment variables', () => {
     const env = [ANDROID_APP_ID, ANDROID_VERSION, ANDROID_BUILD_NUMBER, ANDROID_KEY];
     for (const environmentVariable of env) {

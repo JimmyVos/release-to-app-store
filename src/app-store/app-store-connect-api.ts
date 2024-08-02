@@ -13,6 +13,7 @@ export const appStoreApi = (
     getAppStoreVersions: appStore.getAppStoreVersions,
     makeRelease: async (parameters: IOSReleaseParameters): Promise<void> => {
       const appStoreVersions = await appStore.getAppStoreVersions({ appId: parameters.appId });
+
       const currentVersion = appStoreVersions.find(version =>
         ['PREPARE_FOR_SUBMISSION', 'REJECTED', 'DEVELOPER_REJECTED'].includes(
           version.attributes.appStoreState
@@ -36,7 +37,12 @@ export const appStoreApi = (
         version: parameters.version
       });
 
-      const buildId = builds.find(build => build.attributes.version === parameters.build).id;
+      const buildId = builds.find(build => build.attributes.version === parameters.build)?.id;
+
+      if (!buildId) {
+        throw new Error('no build id found');
+      }
+
       await appStore.addBuildToRelease(version, buildId);
 
       if (parameters.pathToReleaseText) {
